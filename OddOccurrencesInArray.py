@@ -30,8 +30,17 @@ each element of array A is an integer within the range [1..1,000,000,000];
 all but one of the values in A occur an even number of times.
 """
 
-# Time complexity of O(N*N) Brute method. Will change it soon
 def solution(A):
+    # Implement your solution here
+    num = A[0]
+
+    for i in range(1, len(A)):
+        num ^=A[i]
+
+    return num
+
+# Time complexity of O(N*N) Brute method. 
+def solution2(A):
     doubles = []
 
     length = len(A)
